@@ -48,8 +48,8 @@ function App() {
     <div>
       <h1>To-Do-App </h1>
       <div>
-        <input type="text" placeholder='enter the task' value={input} onChange={(e) => setInput(e.target.value)} />
-        <button onClick={handleAddition}>Add</button>
+        <input type="text" placeholder='enter the task' value={input} onChange={(e) => setInput(e.target.value)}  onKeyDown={(e) => e.key==="Enter" && handleAddition() }/>
+        <button onClick={handleAddition} >Add</button>
 
       </div>
       <div>
